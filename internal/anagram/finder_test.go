@@ -39,6 +39,13 @@ func TestFindAnagrams(t *testing.T) {
 			want:       map[string][]string{},
 		},
 		{
+			name:       "latin anagrams",
+			dictionary: []string{"listen", "silent", "enlist", "inlets", "google", "gooogle"},
+			want: map[string][]string{
+				"enlist": {"enlist", "inlets", "listen", "silent"},
+			},
+		},
+		{
 			name:       "empty dictionary",
 			dictionary: []string{},
 			want:       map[string][]string{},
